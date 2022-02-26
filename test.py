@@ -8,7 +8,7 @@ print(response,data)
 
 input()
 
-response=requests.put(base+"video/2",{"name":"dog", "views":879, "likes":167000})
+response=requests.put(base+"video/2",{"name":"dog", "views":9, "likes":9})
 data = response.json()
 print(response,data)
 
@@ -31,12 +31,18 @@ data = response.json()
 print(response,data)
 
 
-response=requests.patch(base+"video/3",{'likes':1})
+response=requests.patch(base+"video/3",{'views':1})
 data = response.json()
 
 print(response,data)
 
+response=requests.delete(base+"video/2")
+data = response.json()
+print(response,data)
 
+response=requests.get(base+"video/2")
+data = response.json()
+print(response,data)
 # response=requests.delete(base+"video/3")
 # data = response
 # print(data)
